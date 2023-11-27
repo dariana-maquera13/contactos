@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contactos App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Contactos</h1>
+        <button onclick="openForm()">Agregar Contacto</button>
+
+        <div id="contact-form" class="form-popup">
+            <form id="form" onsubmit="saveContact(); return false;">
+                <h2>Agregar Contacto</h2>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" required>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" required>
+                <button type="submit">Guardar</button>
+                <button type="button" onclick="closeForm()">Cancelar</button>
+            </form>
+        </div>
+
+        <ul id="contact-list"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
